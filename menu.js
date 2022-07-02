@@ -30,9 +30,17 @@
     'kids'
 */
 
-//CODE HERE
+const pizza = {
 
+    name: 'Veggie Delight',
+    price: 16.00,
+    category: 'entree',
+    popularity: 9,
+    rating: 9,
+    tags: ['vegetarian', 'gluten-free', 'healthy']
+}
 
+console.log(pizza)
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -42,7 +50,7 @@
     Use dot notation to access the value.
 */
 
-//CODE HERE
+console.log(pizza.popularity)
 
 
 /*
@@ -52,7 +60,7 @@
     get the value.
 */
 
-//CODE HERE
+console.log(pizza.tags[1])
 
 
 /*
@@ -62,7 +70,8 @@
     Print the value of your new price variable.
 */
 
-//CODE HERE
+const {price} = pizza
+console.log(price)
 
 
 /*
@@ -72,7 +81,8 @@
     Print the value of your category variable. 
 */
 
-//CODE HERE
+const {category} = pizza
+console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -87,7 +97,51 @@
     data in some functions that you'll write.
 */
 
-//CODE HERE
+const foodArray = [{
+
+    name: 'Fried Calamari',
+    price: 6.00,
+    category: 'appetizer',
+    popularity: 8,
+    rating: 8,
+    tags: ['seafood', 'spicy', '']
+},
+{
+
+    name: 'Spinach Artichoke Dip',
+    price: 13.00,
+    category: 'appetizer',
+    popularity: 10,
+    rating: 9,
+    tags: ['vegetarian', 'gluten-free']
+},
+{
+
+    name: 'Caprese Salad',
+    price: 14.00,
+    category: 'soups & salads',
+    popularity: 8,
+    rating: 9,
+    tags: ['vegetarian', 'gluten-free', 'healthy']
+},
+{
+
+    name: 'Chicken Parmesan',
+    price: 19.00,
+    category: 'entree',
+    popularity: 10,
+    rating: 9,
+    tags: ['hearty', 'aromatic', 'savory']
+},
+{
+
+    name: 'Butternut Squash Ravioli',
+    price: 20.00,
+    category: 'entree',
+    popularity: 10,
+    rating: 10,
+    tags: ['vegetarian', 'flavorful', 'healthy']
+}]
 
 
 

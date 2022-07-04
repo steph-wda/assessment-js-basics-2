@@ -38,6 +38,8 @@ const cart = [
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
 
+
+
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that

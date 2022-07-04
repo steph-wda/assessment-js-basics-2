@@ -97,7 +97,7 @@ console.log(category)
     data in some functions that you'll write.
 */
 
-const foodArray = [{
+const foodArr = [{
 
     name: 'Fried Calamari',
     price: 6.00,
@@ -157,9 +157,11 @@ const foodArray = [{
     your food objects has.
 */
 
-//CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+
+ const filteredFood = foodArr.filter(elem => elem["tags"].indexOf('healthy') > -1)
+ console.log("*****************************")
+ console.log(filteredFood)
 
 
 

@@ -7,7 +7,6 @@
     and filtering those arrays. 
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Create an object called `pizza` that has 6
@@ -31,16 +30,13 @@
 */
 
 const pizza = {
-
-    name: 'Veggie Delight',
-    price: 16.00,
-    category: 'entree',
-    popularity: 9,
-    rating: 9,
-    tags: ['vegetarian', 'gluten-free', 'healthy']
-}
-
-console.log(pizza)
+  name: "Veggie Delight",
+  price: 16.0,
+  category: "entree",
+  popularity: 9,
+  rating: 9,
+  tags: ["vegetarian", "gluten-free", "healthy"],
+};
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -50,8 +46,7 @@ console.log(pizza)
     Use dot notation to access the value.
 */
 
-console.log(pizza.popularity)
-
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -60,8 +55,7 @@ console.log(pizza.popularity)
     get the value.
 */
 
-console.log(pizza.tags[1])
-
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -70,9 +64,8 @@ console.log(pizza.tags[1])
     Print the value of your new price variable.
 */
 
-const {price} = pizza
-console.log(price)
-
+const { price } = pizza;
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -81,9 +74,8 @@ console.log(price)
     Print the value of your category variable. 
 */
 
-const {category} = pizza
-console.log(category)
-
+const { category } = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -97,53 +89,48 @@ console.log(category)
     data in some functions that you'll write.
 */
 
-const foodArr = [{
-
-    name: 'Fried Calamari',
-    price: 6.00,
-    category: 'appetizer',
+const foodArr = [
+  {
+    name: "Fried Calamari",
+    price: 6.0,
+    category: "appetizer",
     popularity: 8,
     rating: 8,
-    tags: ['seafood', 'spicy', '']
-},
-{
-
-    name: 'Spinach Artichoke Dip',
-    price: 13.00,
-    category: 'appetizer',
+    tags: ["seafood", "spicy", "bite-sized"],
+  },
+  {
+    name: "Spinach Artichoke Dip",
+    price: 13.0,
+    category: "appetizer",
     popularity: 10,
-    rating: 9,
-    tags: ['vegetarian', 'gluten-free']
-},
-{
-
-    name: 'Caprese Salad',
-    price: 14.00,
-    category: 'soups & salads',
+    rating: 7,
+    tags: ["vegetarian", "gluten-free", "shareable"],
+  },
+  {
+    name: "Caprese Salad",
+    price: 14.0,
+    category: "soups & salads",
     popularity: 8,
     rating: 9,
-    tags: ['vegetarian', 'gluten-free', 'healthy']
-},
-{
-
-    name: 'Chicken Parmesan',
-    price: 19.00,
-    category: 'entree',
+    tags: ["vegetarian", "gluten-free", "healthy"],
+  },
+  {
+    name: "Chicken Parmesan",
+    price: 19.0,
+    category: "entree",
     popularity: 10,
     rating: 9,
-    tags: ['hearty', 'aromatic', 'savory']
-},
-{
-
-    name: 'Butternut Squash Ravioli',
-    price: 20.00,
-    category: 'entree',
+    tags: ["hearty", "aromatic", "savory"],
+  },
+  {
+    name: "Butternut Squash Ravioli",
+    price: 20.0,
+    category: "entree",
     popularity: 10,
     rating: 10,
-    tags: ['vegetarian', 'flavorful', 'healthy']
-}]
-
-
+    tags: ["vegetarian", "flavorful", "healthy"],
+  },
+];
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -157,13 +144,10 @@ const foodArr = [{
     your food objects has.
 */
 
-
-
- const filteredFood = foodArr.filter(elem => elem["tags"].indexOf('healthy') > -1)
- console.log("*****************************")
- console.log(filteredFood)
-
-
+//used indexOf function. The -1 means that the passed argument is not in the array
+const filteredFood = foodArr.filter(
+  (elem) => elem["tags"].indexOf("healthy") > -1
+);
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -204,8 +188,16 @@ const foodArr = [{
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+const filterByProperty = (property, number, type) => {
+  let newArray = [];
+  if (type.toLowerCase() === "above") {
+    newArray = foodArr.filter((elem) => elem["rating"] > number);
+  } else if (type.toLowerCase() === "below") {
+    newArray = foodArr.filter((elem) => elem["rating"] < number);
+  }
 
+  return newArray;
+};
 
 /*
     Invoke the `filterByProperty` function passing
@@ -214,4 +206,5 @@ const foodArr = [{
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+const tree = filterByProperty("rating", 8, "below");
+console.log(tree);

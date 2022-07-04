@@ -70,13 +70,16 @@ const canWeDeliver = (zipCode) => {
 */
 
 const canWeDeliverTwo = (zipCode) => {
+  //setting a flag to zero
   let match = 0;
   for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
     if (zipCode === deliveryAreaZipCodes[i]) {
+      //increment to one and print success message
       match++;
       console.log(`You're in our delivery zone!`);
     }
   }
+  //if match is still equal to zero that means no match has been found and failure message will print
   if (match === 0) {
     console.log(`Sorry, we can't deliver to that address.`);
   }
@@ -115,8 +118,7 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-deals[0].title = deals[0].title.replace('15', '10')
-
+deals[0].title = deals[0].title.replace("15", "10");
 
 /*
     The restaurant is going to continue its
@@ -131,5 +133,4 @@ deals[0].title = deals[0].title.replace('15', '10')
     to be displaying wrong on the live site.
 */
 
-deals[1].desc = deals[1].desc.replace('March', 'April').trim()
-
+deals[1].desc = deals[1].desc.replace("March", "April").trim();
